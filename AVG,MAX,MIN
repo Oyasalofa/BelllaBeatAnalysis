@@ -1,0 +1,27 @@
+## MIN, MAX, AVG: I analyzed the MIN, MAX, and AVG of total steps, total distance, calories, and activity levels by ID.
+
+
+(SELECT Id,
+MIN(TotalSteps) AS Min_Total_Steps,
+MAX(TotalSteps) AS Max_Total_Steps, 
+AVG(TotalSteps) AS Avg_Total_Stpes,
+MIN(TotalDistance) AS Min_Total_Distance, 
+MAX(TotalDistance) AS Max_Total_Distance, 
+AVG(TotalDistance) AS Avg_Total_Distance,
+MIN(Calories) AS Min_Total_Calories,
+MAX(Calories) AS Max_Total_Calories,
+AVG(Calories) AS Avg_Total_Calories,
+MIN(VeryActiveMinutes) AS Min_Very_Active_Minutes,
+MAX(VeryActiveMinutes) AS Max_Very_Active_Minutes,
+AVG(VeryActiveMinutes) AS Avg_Very_Active_Minutes,
+MIN(FairlyActiveMinutes) AS Min_Fairly_Active_Minutes,
+MAX(FairlyActiveMinutes) AS Max_Fairly_Active_Minutes,
+AVG(FairlyActiveMinutes) AS Avg_Fairly_Active_Minutes,
+MIN(LightlyActiveMinutes) AS Min_Lightly_Active_Minutes,
+MAX(LightlyActiveMinutes) AS Max_Lightly_Active_Minutes,
+AVG(LightlyActiveMinutes) AS Avg_Lightly_Active_Minutes,
+MIN(SedentaryMinutes) AS Min_Sedentary_Minutes,
+MAX(SedentaryMinutes) AS Max_Sedentary_Minutes,
+AVG(SedentaryMinutes) AS Avg_Sedentary_Minutes
+From capstonebnb.dbo.daily_activity_cleaned
+Group BY Id)
