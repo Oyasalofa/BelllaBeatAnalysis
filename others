@@ -1,4 +1,4 @@
-## AVG in Minutes: I narrow down my results to just the averages of the different types of minutes by Id.
+AVG in Minutes: I narrow down my results to just the averages of the different types of minutes by Id.
 
 SELECT Id, 
 avg(VeryActiveMinutes) AS Avg_Very_Active_Minutes,
@@ -9,7 +9,7 @@ FROM capstonebnb.dbo.daily_activity_cleaned
 GROUP BY Id
 
 
-## User Types by Activity Levels: The CDC recommends 150 minutes of physical activity each week. 
+User Types by Activity Levels: The CDC recommends 150 minutes of physical activity each week. 
 I added up the average minutes of Very Active and Fairly Active to see if each unique ID was meeting the CDC's guidelines for activity.
 
 SELECT Id, 
@@ -18,7 +18,7 @@ AS Total_Avg_Active_Minutes
 FROM capstonebnb.dbo.daily_activity_cleaned
 GROUP BY Id
 
-## But if we add in the "lightly active" level, it shows that most of the users now have an average of 150 minutes or more of an "active" period, which is what the CDC recommends.
+But if we add in the "lightly active" level, it shows that most of the users now have an average of 150 minutes or more of an "active" period, which is what the CDC recommends.
 
 
 SELECT Id, 
@@ -30,7 +30,7 @@ FROM capstonebnb.dbo.daily_activity_cleaned
 GROUP BY Id
 
 
-## Steps 
+Steps 
 
 SELECT Id,
 avg(TotalSteps) AS Avg_Total_Steps,
@@ -45,7 +45,7 @@ FROM capstonebnb.dbo.daily_activity_cleaned
 GROUP BY Id
 
 
-## Calories, Steps & Active Minutes by ID: What their logged calories tell us about how many steps they take and how long they are active.
+Calories, Steps & Active Minutes by ID: What their logged calories tell us about how many steps they take and how long they are active.
 
 SELECT Id, 
 Sum(TotalSteps) AS Sum_total_steps,
@@ -54,7 +54,7 @@ SUM(VeryActiveMinutes + FairlyActiveMinutes) AS Sum_Active_Minutes
 FROM capstonebnb.dbo.daily_activity_cleaned
 GROUP BY Id
 
-## Total Steps by Date: I analyzed the Total Steps by Date to find out when our users were the most active.
+Total Steps by Date: I analyzed the Total Steps by Date to find out when our users were the most active.
 
 SELECT ActivityDate,
 --ROUND (avg(TotalSteps), 2) AS Average_Total_Steps
@@ -62,7 +62,7 @@ SELECT ActivityDate,
 --GROUP BY ActivityDate
 
 
-## Sleep
+Sleep
 First, I looked at which date all the users had the most minutes of sleep.
 
 SELECT 
@@ -72,7 +72,7 @@ FROM capstonebnb.dbo.Sleep_day
 WHERE SleepDay IS NOT NULL
 GROUP BY SleepDay
 
-## Average minutes slept, total steps, and calories by user Id.
+Average minutes slept, total steps, and calories by user Id.
 
 SELECT a.Id,
 avg(a.TotalSteps) AS AvgTotalSteps,
