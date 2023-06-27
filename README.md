@@ -35,4 +35,6 @@ Analyse smart device data usage in order to gain insight into how consumers use 
 3. Send training reminders before times when users are most active.
 4. Ensure that their devices have a long-lasting battery so that users can use their devices for longer.
 
-## Interact with the dashboard [here](https://public.tableau.com/app/profile/afolasayo.ojediran/viz/Book1_16878098795310/Dashboard1?publish=yes)
+## Interact with the dashboard on Tableau [here](https://public.tableau.com/app/profile/afolasayo.ojediran/viz/Book1_16878098795310/Dashboard1?publish=yes)
+
+## Read the documentation on [Medium](https://medium.com/p/70e64e339ccc/edit)
