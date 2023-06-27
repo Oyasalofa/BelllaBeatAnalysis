@@ -1,0 +1,11 @@
+## Types of Users
+
+(SELECT Id,
+COUNT(Id) AS Total_Logged_Uses,
+CASE
+WHEN COUNT(Id) BETWEEN 25 AND 31 THEN 'Active User'
+WHEN COUNT(Id) BETWEEN 15 and 24 THEN 'Moderate User'
+WHEN COUNT(Id) BETWEEN 0 and 14 THEN 'Light User'
+END Fitbit_Usage_Type
+FROM capstonebnb.dbo.daily_activity_cleaned
+GROUP BY Id)
