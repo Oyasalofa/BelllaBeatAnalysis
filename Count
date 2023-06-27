@@ -1,0 +1,34 @@
+--##Check total Ids in Dailyactive
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.daily_activity_cleaned
+
+--##Check total Ids in heartrate_seconds_merged
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.heartrate_seconds
+
+--##Check total Ids in hourlyCalroie_merged
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.hourly_activity
+
+--##Check total Ids in hourlyIntensity_merged
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.hourly_activity
+
+--##Check total Ids in hourlySteps_merged
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.hourly_activity
+
+--##Check total Ids in Sleepday
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.sleep_day
+
+--##Check total Ids in weightLogInfo_merged
+
+SELECT COUNT(DISTINCT Id) AS Total_Ids 
+FROM capstonebnb.dbo.weightLogInfo
